@@ -1,0 +1,22 @@
+{% extends "index.html" %}
+{% block start %}
+<h1>add Receipe</h1>
+<div class="container mt-5">
+<form class="col-6 mx-auto card p-3 shadow-1g" method="post" enctype="multipart/form-data">
+     {% csrf_token %}
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Receipe Name</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" name="r_name" placeholder="name">
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Receipe Details</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" name="r_detail" rows="3"></textarea>
+    </div><br>
+    <div class="form-group">
+        <label for="exampleFormControlFile1">Add Image</label>
+        <input type="file" class="form-control-file" name="r_file" id="exampleFormControlFile1">
+      </div><br>
+      <button type="submit" class="btn btn-primary">Add Receipe</button>
+  </form>
+</div>
+{% endblock %}
